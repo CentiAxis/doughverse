@@ -8,19 +8,22 @@ export default function Home() {
 
   if (!userType) {
   return (
-    <div
-      className="flex flex-col items-center justify-center h-screen bg-cover bg-center text-white"
-      style={{
-        backgroundImage: "url('/parotta-wallpaper.jpg')",
-      }}
-    >
-      <h1 className="text-5xl font-bold mb-6 drop-shadow-md">Doughverse</h1>
-      <div className="space-y-4">
-        <Button onClick={() => setUserType("guest")}>Continue as Guest</Button>
-        <Button onClick={() => setUserType("member")}>Member Login</Button>
-        <Button onClick={() => setUserType("signup")}>Sign Up</Button>
-      </div>
-    </div>
+<div
+  className="relative flex flex-col items-center justify-center min-h-screen text-white"
+  style={{
+    backgroundImage: "url('/parotta-wallpaper.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center"
+  }}
+>
+  <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div> {/* Optional dark overlay */}
+  <div className="relative z-10 flex flex-col items-center space-y-4">
+    <h1 className="text-5xl font-bold drop-shadow-md">Doughverse</h1>
+    <Button onClick={() => setUserType("guest")}>Continue as Guest</Button>
+    <Button onClick={() => setUserType("member")}>Member Login</Button>
+    <Button onClick={() => setUserType("signup")}>Sign Up</Button>
+  </div>
+</div>
   );
   }
 
