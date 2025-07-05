@@ -11,7 +11,7 @@ export default function Home() {
     <div
       className="flex flex-col items-center justify-center h-screen bg-cover bg-center text-white"
       style={{
-        backgroundImage: "url('parotta-wallpaper.jpg')",
+        backgroundImage: "url('/parotta-wallpaper.jpg')",
       }}
     >
       <h1 className="text-5xl font-bold mb-6 drop-shadow-md">Doughverse</h1>
