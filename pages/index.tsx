@@ -8,7 +8,12 @@ export default function Home() {
 
   if (!userType) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen bg-[url('/parotta-wallpaper.jpg')] bg-cover text-white">
+      <div
+        className="flex flex-col items-center justify-center h-screen bg-cover bg-center text-white"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1685607643704-5dc3374bc09f?auto=format&fit=crop&w=1470&q=80')",
+        }}
+      >
         <h1 className="text-5xl font-bold mb-6 drop-shadow-md">Doughverse</h1>
         <div className="space-y-4">
           <Button onClick={() => setUserType("guest")}>Continue as Guest</Button>
@@ -35,21 +40,42 @@ export default function Home() {
             <CardContent className="p-4">
               <h3 className="text-xl font-semibold">Daily - $2</h3>
               <p>Full access for 24 hours.</p>
-              <Button onClick={() => { setUserType("member"); setMembershipTier("daily"); }}>Subscribe</Button>
+              <Button
+                onClick={() => {
+                  setUserType("member");
+                  setMembershipTier("daily");
+                }}
+              >
+                Subscribe
+              </Button>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4">
               <h3 className="text-xl font-semibold">Monthly - $31 (Sale)</h3>
               <p>Best for regular users.</p>
-              <Button onClick={() => { setUserType("member"); setMembershipTier("monthly"); }}>Subscribe</Button>
+              <Button
+                onClick={() => {
+                  setUserType("member");
+                  setMembershipTier("monthly");
+                }}
+              >
+                Subscribe
+              </Button>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4">
               <h3 className="text-xl font-semibold">Yearly - $300 (Save $200)</h3>
               <p>Unlock everything for a year.</p>
-              <Button onClick={() => { setUserType("member"); setMembershipTier("yearly"); }}>Subscribe</Button>
+              <Button
+                onClick={() => {
+                  setUserType("member");
+                  setMembershipTier("yearly");
+                }}
+              >
+                Subscribe
+              </Button>
             </CardContent>
           </Card>
         </div>
