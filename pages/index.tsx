@@ -9,15 +9,15 @@ export default function Home() {
   if (!userType) {
     return (
       <div
-        className="relative flex flex-col items-center justify-center min-h-screen text-white"
-        style={{
-          backgroundImage: "url('/parotta-wallpaper.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+  className="flex flex-col items-center justify-center w-screen h-screen text-white"
+  style={{
+    backgroundImage: "url('/parotta-wallpaper.jpg')",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
         <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div> {/* Optional overlay */}
         <div className="relative z-10 flex flex-col items-center space-y-4">
           <h1 className="text-5xl font-bold drop-shadow-md">Doughverse</h1>
