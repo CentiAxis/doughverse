@@ -9,12 +9,9 @@ export default function Home() {
   if (!userType) {
     return (
 <div
-  className="relative flex flex-col items-center justify-center w-full text-white"
+  className="min-h-screen w-full flex flex-col items-center justify-center bg-cover bg-center text-white"
   style={{
     backgroundImage: "url('/parotta-wallpaper.jpg')",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
   }}
 >
         <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div> {/* Optional overlay */}
