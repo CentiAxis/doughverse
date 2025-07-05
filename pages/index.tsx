@@ -7,21 +7,21 @@ export default function Home() {
   const [membershipTier, setMembershipTier] = useState<null | "daily" | "monthly" | "yearly">(null);
 
   if (!userType) {
-    return (
-      <div
-        className="flex flex-col items-center justify-center h-screen bg-cover bg-center text-white"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1685607643704-5dc3374bc09f?auto=format&fit=crop&w=1470&q=80')",
-        }}
-      >
-        <h1 className="text-5xl font-bold mb-6 drop-shadow-md">Doughverse</h1>
-        <div className="space-y-4">
-          <Button onClick={() => setUserType("guest")}>Continue as Guest</Button>
-          <Button onClick={() => setUserType("member")}>Member Login</Button>
-          <Button onClick={() => setUserType("signup")}>Sign Up</Button>
-        </div>
+  return (
+    <div
+      className="flex flex-col items-center justify-center h-screen bg-cover bg-center text-white"
+      style={{
+        backgroundImage: "url('https://cdn.pixabay.com/photo/2020/11/01/06/15/parotta-5702195_1280.jpg')",
+      }}
+    >
+      <h1 className="text-5xl font-bold mb-6 drop-shadow-md">Doughverse</h1>
+      <div className="space-y-4">
+        <Button onClick={() => setUserType("guest")}>Continue as Guest</Button>
+        <Button onClick={() => setUserType("member")}>Member Login</Button>
+        <Button onClick={() => setUserType("signup")}>Sign Up</Button>
       </div>
-    );
+    </div>
+  );
   }
 
   if (userType === "signup") {
