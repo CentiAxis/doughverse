@@ -8,12 +8,11 @@ export default function Home() {
 
   if (!userType) {
     return (
-      <div
-  className="flex flex-col items-center justify-center w-screen h-screen text-white"
+<div
+  className="relative flex flex-col items-center justify-center w-full text-white"
   style={{
     backgroundImage: "url('/parotta-wallpaper.jpg')",
     backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
