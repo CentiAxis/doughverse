@@ -7,24 +7,26 @@ export default function Home() {
   const [membershipTier, setMembershipTier] = useState<null | "daily" | "monthly" | "yearly">(null);
 
   if (!userType) {
-  return (
-<div
-  className="relative flex flex-col items-center justify-center min-h-screen text-white"
-  style={{
-    backgroundImage: "url('/parotta-wallpaper.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center"
-  }}
->
-  <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div> {/* Optional dark overlay */}
-  <div className="relative z-10 flex flex-col items-center space-y-4">
-    <h1 className="text-5xl font-bold drop-shadow-md">Doughverse</h1>
-    <Button onClick={() => setUserType("guest")}>Continue as Guest</Button>
-    <Button onClick={() => setUserType("member")}>Member Login</Button>
-    <Button onClick={() => setUserType("signup")}>Sign Up</Button>
-  </div>
-</div>
-  );
+    return (
+      <div
+        className="relative flex flex-col items-center justify-center min-h-screen text-white"
+        style={{
+          backgroundImage: "url('/parotta-wallpaper.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div> {/* Optional overlay */}
+        <div className="relative z-10 flex flex-col items-center space-y-4">
+          <h1 className="text-5xl font-bold drop-shadow-md">Doughverse</h1>
+          <Button onClick={() => setUserType("guest")}>Continue as Guest</Button>
+          <Button onClick={() => setUserType("member")}>Member Login</Button>
+          <Button onClick={() => setUserType("signup")}>Sign Up</Button>
+        </div>
+      </div>
+    );
   }
 
   if (userType === "signup") {
@@ -43,42 +45,21 @@ export default function Home() {
             <CardContent className="p-4">
               <h3 className="text-xl font-semibold">Daily - $2</h3>
               <p>Full access for 24 hours.</p>
-              <Button
-                onClick={() => {
-                  setUserType("member");
-                  setMembershipTier("daily");
-                }}
-              >
-                Subscribe
-              </Button>
+              <Button onClick={() => { setUserType("member"); setMembershipTier("daily"); }}>Subscribe</Button>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4">
               <h3 className="text-xl font-semibold">Monthly - $31 (Sale)</h3>
               <p>Best for regular users.</p>
-              <Button
-                onClick={() => {
-                  setUserType("member");
-                  setMembershipTier("monthly");
-                }}
-              >
-                Subscribe
-              </Button>
+              <Button onClick={() => { setUserType("member"); setMembershipTier("monthly"); }}>Subscribe</Button>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4">
               <h3 className="text-xl font-semibold">Yearly - $300 (Save $200)</h3>
               <p>Unlock everything for a year.</p>
-              <Button
-                onClick={() => {
-                  setUserType("member");
-                  setMembershipTier("yearly");
-                }}
-              >
-                Subscribe
-              </Button>
+              <Button onClick={() => { setUserType("member"); setMembershipTier("yearly"); }}>Subscribe</Button>
             </CardContent>
           </Card>
         </div>
