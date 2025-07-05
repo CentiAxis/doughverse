@@ -70,4 +70,16 @@ export default function Home() {
         <Card>
           <CardContent className="p-4">
             <h2 className="text-xl font-semibold">Tiers & Privileges</h2>
-            <p
+            <p className="text-sm text-gray-500">See what each tier unlocks.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <h2 className="text-xl font-semibold">Profile</h2>
+            <p className="text-sm text-gray-500">View your membership details.</p>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}
